@@ -16,7 +16,8 @@ export default function Home(props) {
   }
 
   return (
-    
+    <>
+    <SEO title="Quotesbee - An anime quotes generator app"/>
     <div className="container my-10 py-4 mx-auto text-center">
       <div className="my-4 brand">
       <h1 className="text-5xl font-bold">Quotes Bee</h1>
@@ -38,6 +39,7 @@ export default function Home(props) {
 <button className="text-2xl font-bold text-white p-3 m-4 bg-green-500  hover:bg-gray-800" onClick={getAnimeQuotes}>New Quote</button>
 </div>
 </div>
+</>
   )
 }
 
