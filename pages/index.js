@@ -28,7 +28,7 @@ export default function Home(props) {
       
 <div className="max-w-md py-4 mx-auto px-8 bg-white shadow-lg rounded-lg my-20">
 <div className="flex justify-center md:justify-end -mt-16">
-    <Image alt={"Anime"} className="w-40 h-40 rounded-full border-2 border-green-500" src="https://animehunch.com/wp-content/uploads/2021/02/Megumi-Fushiguro-768x432.jpg"/>
+    <Image alt={"Anime"} width={128} height={128} className="w-40 h-40 rounded-full border-2 border-green-500" src="/anime.jpg"/>
 </div>
 <div>
   <h2 className="text-gray-800 text-3xl font-semibold">{anime}</h2>
