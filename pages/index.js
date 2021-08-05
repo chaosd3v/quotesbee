@@ -20,6 +20,7 @@ export default function Home(props) {
     <>
    <Head>
      <title>Quotesbee - A random anime quote generator app</title>
+     <link rel="icon" href="/anime.jpg"/>
      </Head>
     <div className="container my-10 py-4 mx-auto text-center">
       <div className="my-4 brand">
