@@ -8,7 +8,7 @@ export default function Home(props) {
 
  async function getAnimeQuotes(){
     fetch('https://animechan.vercel.app/api/random').then(response => response.json()).then(data => inspire(data)).catch(err=>console.log(err)) 
-  }
+}
 
   async function inspire(quotes){
         setCharacter(quotes.character)
@@ -26,7 +26,6 @@ export default function Home(props) {
       <div className="my-4 brand">
       <h1 className="text-5xl font-bold">Quotes Bee</h1>
       </div>
-      
 <div className="max-w-md py-4 mx-auto px-8 bg-white shadow-lg rounded-lg my-20">
 <div className="flex justify-center md:justify-end -mt-16">
     <Image alt={"Anime"} width={128} height={128} className="w-40 h-40 rounded-full border-2 border-green-500" src="/anime.jpg"/>
