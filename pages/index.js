@@ -1,13 +1,21 @@
 import { useState } from "react";
 import Head from 'next/head'
 import Image from 'next/image'
+
 export default function Home(props) {
-  const [anime,setAnime] = useState(props.data.anime)
-  const [character,setCharacter] = useState(props.data.character)
-  const [quote,setQuote] = useState(props.data.quote)
+
+  const [anime, setAnime] = useState(props.data.anime)
+  const [character, setCharacter] = useState(props.data.character)
+  const [quote, setQuote] = useState(props.data.quote)
 
  async function getAnimeQuotes(){
-    fetch('https://animechan.vercel.app/api/random').then(response => response.json()).then(data => inspire(data)).catch(err=>console.log(err)) 
+    const ANIME_API_URL = "https://animechan.vercel.app/api/random";
+    fetch(ANIME_API_URL)
+    .then(response => response.json())
+    .then(quote=> inspire(quote))
+    .catch(err=>{
+      console.log(err)
+    }) 
 }
 
   async function inspire(quotes){
@@ -24,7 +32,7 @@ export default function Home(props) {
      </Head>
     <div className="container my-10 py-4 mx-auto text-center">
       <div className="my-4 brand">
-      <h1 className="text-5xl font-bold">Quotes Bee</h1>
+      <h1 className="text-4xl font-bold">Quotes Bee</h1>
       </div>
 <div className="max-w-md py-4 mx-auto px-8 bg-white shadow-lg rounded-lg my-20">
 <div className="flex justify-center md:justify-end -mt-16">
