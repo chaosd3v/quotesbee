@@ -1,0 +1,1 @@
+export const ANIME_API_URL = "https://animechan.vercel.app/api/random";
