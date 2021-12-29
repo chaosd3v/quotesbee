@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Head from 'next/head'
 import Image from 'next/image'
-import {ANIME_API_URL} from '@/utils/Constants'
+import {Anime} from '@/utils/Constants'
 
 export default function Home(props) {
 
@@ -15,11 +15,12 @@ export default function Home(props) {
     try{
       setButtonMessage("Loading...")
 
-      const response = await fetch(ANIME_API_URL)
+      const response = await fetch(Anime.url)
       const quote = await response.json()
       loadQuote(quote)
     }catch{
-      new Error("Nothing");
+      new Error("Load failed");
+      console.log("Quotes loading failed");
     }
 }
 
@@ -34,7 +35,7 @@ export default function Home(props) {
     <>
    <Head>
      <title>Quotesbee - A random anime quote generator app</title>
-     <link rel="icon" href="/anime.jpg"/>
+     <link rel="icon" href={Anime.logo} />
      </Head>
     <div className="container my-10 py-4 mx-auto text-center">
       <div className="my-4 brand">
@@ -42,7 +43,7 @@ export default function Home(props) {
       </div>
 <div className="max-w-md py-4 mx-auto px-8 bg-white shadow-lg rounded-lg my-20">
 <div className="flex justify-center md:justify-end -mt-16">
-    <Image alt={"Anime"} width={128} height={128} className="w-40 h-40 rounded-full border-2 border-green-500" src="/anime.jpg"/>
+    <Image alt={"Anime"} width={128} height={128} className="w-40 h-40 rounded-full border-2 border-green-500" src={Anime.logo}/>
 </div>
 <div>
   <h2 className="text-gray-800 m-4 text-2xl font-semibold">{anime}</h2>
@@ -60,7 +61,7 @@ export default function Home(props) {
 
 export async function getStaticProps(){
  
-  const result = await fetch(ANIME_API_URL)
+  const result = await fetch(Anime.url)
   const data = await result.json()
   
   return{
