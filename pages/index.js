@@ -51,7 +51,7 @@ export default function Home(props) {
 <div className="flex justify-end mt-4">
   <p className="text-1xl font-medium text-green-500"> - {character} </p>
 </div>
-<button className="text-1xl font-bold text-white p-3 m-4 bg-green-500  rounded hover:bg-gray-800" onClick={getAnimeQuotes}>{buttonMessage}</button>
+<button className="text-1xl font-bold text-white p-3 m-4 bg-green-500  rounded hover:bg-gray-800 transition duration-300 ease-in-out" onClick={getAnimeQuotes}>{buttonMessage}</button>
 </div>
 </div>
 </>
