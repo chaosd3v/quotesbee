@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Head from 'next/head'
 import Image from 'next/image'
-import {Anime} from '@/utils/Constants'
+import BaseLayout from '@layouts/Layout'
+import {Anime} from '@utils/Constants'
 
 export default function Home(props) {
 
@@ -37,8 +38,9 @@ export default function Home(props) {
      <title>Quotesbee - A random anime quote generator app</title>
      <link rel="icon" href={Anime.logo} />
      </Head>
-    <div className="container my-10 py-4 mx-auto text-center">
-      <div className="my-4 brand">
+     <BaseLayout>
+    <div className="container py-4 mx-auto text-center">
+      <div className="my-8 brand">
       <h1 className="text-3xl font-bold">Quotes Bee</h1>
       </div>
 <div className="max-w-md py-4 mx-auto px-8 bg-white shadow-lg rounded-lg my-20">
@@ -55,6 +57,7 @@ export default function Home(props) {
 <button className="text-1xl font-bold text-white p-3 m-4 bg-green-500  rounded hover:bg-gray-800 transition duration-300 ease-in-out" onClick={getAnimeQuotes}>{buttonMessage}</button>
 </div>
 </div>
+</BaseLayout>
 </>
   )
 }

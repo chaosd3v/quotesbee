@@ -1,6 +1,6 @@
-export default function Background({children}){
+export default function BaseLayout({children}){
     return (
-    <div>
+    <div className="bg-primary-default h-screen">
     {children}
     </div>
     )
