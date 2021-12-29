@@ -1,1 +1,8 @@
-export const ANIME_API_URL = "https://animechan.vercel.app/api/random";
+/* 
+    url: API url path for quotes data 
+    logo: Default App logo
+*/
+export const Anime = {
+    url: "https://animechan.vercel.app/api/random",
+    logo: "/logo.jpg"
+}
