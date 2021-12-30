@@ -49,7 +49,7 @@ export default function Home(props) {
 </div>
 <div>
   <h2 className="text-gray-800 m-4 text-2xl font-semibold">{anime}</h2>
-  <p className="mt-2 text-1xl text-gray-600">{quote}</p>
+  <p className="mt-2 text-1xl italic text-gray-600">{quote}</p>
 </div>
 <div className="flex justify-end mt-4">
   <p className="text-1xl font-medium text-green-500"> - {character} </p>
