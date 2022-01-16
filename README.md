@@ -5,10 +5,11 @@ A random anime motivational quotes generator web app
 
 
 
-```sh
-# Tech Stack Used
-Next.JS
-
+```js
+// Tech Stack
+Next.JS - React Framework
+//Programming Language
+Javascript
 ```
 
 
