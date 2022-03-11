@@ -7,7 +7,7 @@ A random anime motivational quotes generator web app
 
 ```js
 // Tech Stack
-Next.JS - React Framework
+Next.JS - React Framework, Tailwind.CSS
 //Programming Language
 Javascript
 ```
